@@ -2,7 +2,7 @@ import Header from "./Header";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { Box } from "@mui/material";
-import { token } from "./token";
+import token from "./token";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Stack from "@mui/material/Stack";
@@ -10,7 +10,6 @@ import "react-toastify/dist/ReactToastify.css";
 import "./Video.css";
 import Modal from "@mui/material/Modal";
 const Video = () => {
-  const tokenLocal = localStorage.getItem("token");
   const [movieVideo, setMovieVideo] = useState();
   const param = useParams();
   const [movieContent, setMovieContent] = useState();
@@ -53,20 +52,18 @@ const Video = () => {
   };
 
   useEffect(() => {
-    fetchMovieDetails();
-    fetchVideoForMovie();
+    const handleapi = async () => {
+      await fetchMovieDetails();
+      await fetchVideoForMovie();
+    };
   }, []);
   return (
     <Box>
+      <Box>
+        <Header fixedOrRelative="relative" token={token} hideSearchBox />
+      </Box>
       {token == localStorage.getItem("token") ? (
         <>
-          <Box>
-            <Header
-              fixedOrRelative="relative"
-              token={localStorage.getItem("token")}
-              hideSearchBox
-            />
-          </Box>
           {movieContent ? (
             <Box>
               <Modal
@@ -139,7 +136,7 @@ const Video = () => {
           ) : null}
         </>
       ) : (
-        <Box>LOGIN TO ACCESS THIS PAGE</Box>
+        <Box className="content">LOGIN TO ACCESS THIS PAGE</Box>
       )}
 
       <ToastContainer />

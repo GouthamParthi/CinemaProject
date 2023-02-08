@@ -3,7 +3,7 @@ import "./Header.css";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, TextField } from "@mui/material/";
 import { useState } from "react";
-
+import token from "./token";
 const Header = ({ token, handleSearch, hideSearchBox, fixedOrRelative }) => {
   const navigate = useNavigate();
   const [debounceTimeout, setDebounceTimeout] = useState();
