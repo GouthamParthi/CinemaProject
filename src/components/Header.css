@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(38, 62, 96);
+
+  width: 100%;
+  z-index: 4;
+}
+.header img {
+  width: 96px;
+  height: 70px;
+  margin: 10px 0px 10px 58px;
+}
+.searchBox .MuiOutlinedInput-root {
+  height: 60px;
+  color: rgb(255, 255, 255);
+  border: solid 4px;
+  border-color: rgb(255, 255, 255);
+}

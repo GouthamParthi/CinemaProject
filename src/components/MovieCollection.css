@@ -1,0 +1,17 @@
+.movies {
+  background-color: rgb(13, 17, 28);
+}
+.grid {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.cardDetail {
+  color: rgb(255, 255, 255);
+  background-color: #24446b;
+  padding: 2px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

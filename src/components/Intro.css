@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@700&display=swap");
+.intro {
+  background-image: url("https://github.com/GouthamParthi/cinema-image/blob/main/1.jpg.png?raw=true");
+  color: rgb(255, 255, 255);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.special {
+  font-family: Roboto;
+  font-size: 80px;
+  margin: 0px;
+}
+.special span {
+  color: #ff1744;
+}
+.intro .readMore {
+  border-radius: 30px;
+  width: 200px;
+  background-color: #ff1744;
+}
+.description {
+  width: 30%;
+  transform: translate(115%);
+  z-index: 2;
+}
+.welcome {
+  font-family: Roboto;
+  font-size: 40px;
+  margin: 0px;
+}
+@media only screen and (max-width: 600px) {
+  .special {
+    font-size: 40px;
+  }
+  .welcome {
+    font-size: 20px;
+  }
+  .description {
+    width: 100%;
+    transform: translate(0%);
+  }
+  .intro {
+    height: 80vh;
+  }
+}

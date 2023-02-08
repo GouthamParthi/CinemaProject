@@ -1,0 +1,19 @@
+.login {
+  background: rgb(13, 17, 28);
+  height: 100vh;
+  background-size: cover;
+}
+.card {
+  width: 50%;
+  transform: translate(50%, 50%);
+  border-radius: 10px;
+  background-color: aliceblue;
+  padding: 10px;
+}
+.field .MuiOutlinedInput-root {
+  border-radius: 30px;
+}
+.loginButton {
+  border-radius: 30px;
+  background-color: #ff7d65;
+}
